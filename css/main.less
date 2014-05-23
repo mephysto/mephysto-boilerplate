@@ -1,0 +1,172 @@
+@import 'normalize.less';
+
+/*! 
+	HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/
+	converted to LESS by Maurice Melchers, http://www.mephysto.nl/ 
+*/
+
+html,
+button,
+input,
+select,
+textarea {
+	color: #333;
+}
+
+html {
+	font-size: 10px;
+	line-height: 1.5em;
+}
+
+::-moz-selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+
+::selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+	vertical-align: middle;
+}
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+textarea {
+	resize: vertical;
+}
+
+.browsehappy {
+	margin: 0.2em 0;
+	background: #ccc;
+	color: #000;
+	padding: 0.2em 0;
+}
+
+@import "mixins.less";
+@import "fonts.less";
+
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+
+*{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	.fontBody;
+}
+
+.wrapper {
+	width: 90%;
+	margin: 0 5%;
+}
+
+
+/* ==============
+	MOBILE: Menu
+   ============== */
+nav{
+	ul{
+		margin: 0;
+		padding: 0;
+	}
+	a{
+		display: block;
+		margin-bottom: 10px;
+		padding: 15px 0;
+
+		text-align: center;
+		text-decoration: none;
+		font-weight: bold;
+
+		color: white;
+		background: #e44d26;
+		&:hover, &:visited{
+			color: white;
+		};
+		&:hover{
+			text-decoration: underline;
+		};
+	}
+}
+h1,h2,h3,h4{
+	margin: 0;
+	padding: 0;
+	.fontHeadings;
+}
+p{
+	margin: 0;
+	padding: 0;
+	.fontBody;
+}
+
+/* ==============
+	MOBILE: Main
+   ============== */
+
+.main {
+	padding: 30px 0;
+	article h1 {
+		font-size: 2em;
+	}
+	aside {
+		color: white;
+		padding: 0px 5% 10px;
+	}
+}
+
+.footer-container footer {
+	color: white;
+	padding: 20px 0;
+}
+
+/* ===============
+	ALL: IE Fixes
+   =============== */
+
+.ie7 .title {
+	padding-top: 20px;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import "mediaqueries.less";
+@import "helper.less";
+@import "print.less";
