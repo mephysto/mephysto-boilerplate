@@ -6,10 +6,8 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-    
-    log: {
+    pkg: this.file.readJSON('package.json'),
 
-    },
     pkg: grunt.file.readJSON('package.json'),
 
     // process + minify LESS into CSS
@@ -109,6 +107,35 @@ module.exports = function(grunt) {
 
   });
 
+  grunt.registerTask('logo', '', function(){
+    grunt.log.writeln(['\n\n\n'+
+'                        .. .   .:IMMMMM~' + 
+'\n                      ..:7MMMMMMMMMMMM8.' + 
+'\n      . .  ..   :7MMMMMMM,,...8MMMMMMM' + 
+'\n        ~$MM,... IMMMMMM+8......MMMMMM .' + 
+'\n ZMMMMMMMMMMN......MMMMM$.......MMMMM.' + 
+'\nZ?MMMMMMMMMM....... MMM....7....MMMM+' + 
+'\n 8..MMMMMMMM........NM 8..M.....MMMM.' + 
+'\n..$  NMMMMMM.........77...:.D...MMM$ .' + 
+'\n   .=.7MMMMM..........=..M M8...MMM ..' + 
+'\n     I  MMMM....M.......7=DMZ...MM. ..' + 
+'\n    . .? ?M8....MN......M MMI...MM.' + 
+'\n        D..$....MM7.....:=MN+...D:.' + 
+'\n         . .....MMM....= MMD....O.' + 
+'\n        .  D....MMMM+..N.MM8.....  ' + 
+'\n         . .7...MMMMMMMMMMMO...O.       ' + 
+'\n            . +.IMMMMMMMMMM$..=. .      ' + 
+'\n            .. + .MMMMMMMMM7..+         ' + 
+'\n            .....I +MMMMMMMM,~ .        ' + 
+'\n                  8..MMMMMMM.$ .        ' + 
+'\n                .... .NMMMMMM           ' + 
+'\n                   . 8 .MMMM.           ' + 
+'\n                   .. ?. DMM  .         ' + 
+'\n                       .I.8:            ' + 
+'\n                      .  =   \n' + 
+'\n Running Maurice Melchers :: Boilerplate\n\n\n']);
+  });
+
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-less');
@@ -120,13 +147,13 @@ module.exports = function(grunt) {
   // Default task(s).
 
   /* ## Build site */
-  grunt.registerTask('default', ['less', 'autoprefixer', 'uglify', 'imagemin']);
+  grunt.registerTask('default', ['less', 'autoprefixer', 'uglify', 'imagemin', 'logo']);
 
   // start watching for changes in LESS
-  grunt.registerTask('watchstyles', ['less', 'autoprefixer', 'watch:styles']);
+  grunt.registerTask('watchstyles', ['logo','less', 'autoprefixer', 'watch:styles']);
   // start watching for changes in JS
-  grunt.registerTask('watchscripts', ['uglify', 'watch:scripts']);
+  grunt.registerTask('watchscripts', ['logo','uglify', 'watch:scripts']);
   // start watching for changes in image folder
-  grunt.registerTask('watchimages', ['imagemin', 'watch:images']);
+  grunt.registerTask('watchimages', ['logo','imagemin', 'watch:images']);
 
 };
