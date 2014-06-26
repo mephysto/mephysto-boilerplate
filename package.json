@@ -2,7 +2,11 @@
   "name": "MEPHYSTO",
   "version": "0.1.0",
   "author": "Maurice Melchers",
-  "description": "<project description here>",
+  "description": "A starting point for my personal and professional front end projects",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mephysto/mephysto-boilerplate.git"
+  }
   "contributors": [
     {
       "name": "Maurice Melchers",
