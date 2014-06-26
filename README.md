@@ -18,6 +18,7 @@ includes:
 * option to include FontAwesome
 * build foldersystem
 
-First run:
-* npm install
-* grunt
+First run console commands:
+* npm install (download and set up all the plugins and build libraries)
+* grunt (creates all the initial minified folders and files for the first time)
+* node webserver.node.js (this creates a webserver on port 8000)
