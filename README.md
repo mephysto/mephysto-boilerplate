@@ -2,11 +2,11 @@
 
 includes:
 * Node.js
-	* webserver.node.js (port 8000)
-	* Grunt.js
-		* LESS compiler
-		* autoprefixer (vendor prefixes + minifier)
-		* uglify
+  * webserver.node.js (port 8000)
+  * Grunt.js
+    * LESS compiler
+    * autoprefixer (vendor prefixes + minifier)
+    * uglify
     * imagemin
     * concat
     * watch
@@ -17,3 +17,7 @@ includes:
 * different LESS files for specific purposes
 * option to include FontAwesome
 * build foldersystem
+
+First run:
+* npm install
+* grunt
