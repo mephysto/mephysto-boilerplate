@@ -1,15 +1,16 @@
-/*
-TO DO
-*/
-
 module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
     pkg: this.file.readJSON('package.json'),
 
-    pkg: grunt.file.readJSON('package.json'),
-
+    vars: {
+      styles: '/css/',
+    },
+    // clean
+    clean: {
+      build: [""]
+    }
     // process + minify LESS into CSS
     less: {
       development: {
@@ -143,6 +144,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
   // Default task(s).
 
