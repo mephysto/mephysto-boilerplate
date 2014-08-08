@@ -5,12 +5,28 @@ module.exports = function(grunt) {
     pkg: this.file.readJSON('package.json'),
 
     vars: {
-      styles: '/css/',
+      styles: 'css/',
     },
+
     // clean
     clean: {
       build: [""]
-    }
+    },
+
+    // JS hint
+    jshint: {
+      options: {
+        curly: true,
+        eqeqeq: true,
+        eqnull: true,
+        browser: true,
+        globals: {
+          jQuery: true
+        }
+      },
+      all: ['**/*.js']
+    },
+
     // process + minify LESS into CSS
     less: {
       development: {
@@ -36,8 +52,6 @@ module.exports = function(grunt) {
       },
     },
 
-
-
     // minify JS
     uglify: {
       build: {
@@ -49,8 +63,6 @@ module.exports = function(grunt) {
         dest: 'js/build/global.min.js'
       }
     },
-
-
 
     // optimize images
     imagemin: {
@@ -138,6 +150,7 @@ module.exports = function(grunt) {
   });
 
   // Load the plugin that provides the "uglify" task.
+  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
@@ -149,12 +162,12 @@ module.exports = function(grunt) {
   // Default task(s).
 
   /* ## Build site */
-  grunt.registerTask('default', ['less', 'autoprefixer', 'uglify', 'imagemin', 'logo']);
+  grunt.registerTask('default', ['less', 'autoprefixer','jshint','uglify', 'imagemin', 'logo']);
 
   // start watching for changes in LESS
   grunt.registerTask('watchstyles', ['logo','less', 'autoprefixer', 'watch:styles']);
   // start watching for changes in JS
-  grunt.registerTask('watchscripts', ['logo','uglify', 'watch:scripts']);
+  grunt.registerTask('watchscripts', ['logo','jshint','uglify', 'watch:scripts']);
   // start watching for changes in image folder
   grunt.registerTask('watchimages', ['logo','imagemin', 'watch:images']);
 
