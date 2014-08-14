@@ -4,3 +4,8 @@
 # Node.
 node_modules
 npm-debug.log
+
+#build
+/css/build/
+/images/build/
+/js/build/
