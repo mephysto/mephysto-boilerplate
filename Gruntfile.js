@@ -24,7 +24,8 @@ module.exports = function(grunt) {
           jQuery: true
         }
       },
-      all: ['**/*.js']
+      // change this line to match your js files
+      all: ['js/main.js']
     },
 
     // process + minify LESS into CSS
@@ -162,7 +163,7 @@ module.exports = function(grunt) {
   // Default task(s).
 
   /* ## Build site */
-  grunt.registerTask('default', ['less', 'autoprefixer','jshint','uglify', 'imagemin', 'logo']);
+  grunt.registerTask('default', ['logo', 'less', 'autoprefixer','jshint','uglify', 'imagemin']);
 
   // start watching for changes in LESS
   grunt.registerTask('watchstyles', ['logo','less', 'autoprefixer', 'watch:styles']);
