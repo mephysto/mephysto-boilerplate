@@ -6,6 +6,7 @@ node_modules
 npm-debug.log
 
 #build
+/css/styles.css
 /css/build/
 /images/build/
 /js/build/
