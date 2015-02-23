@@ -1,8 +1,8 @@
 {
   "name": "Mephysto-boilerplate",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "author": "Maurice Melchers",
-  "description": "A starting point for my personal and professional front end projects",
+  "desc`ription": "A starting point for my personal and professional front end projects",
   "repository": {
     "type": "git",
     "url": "git://github.com/mephysto/mephysto-boilerplate.git"
@@ -15,18 +15,22 @@
     }
   ],
   "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-uglify": "^0.6.0",
-    "grunt-contrib-concat": "^0.4.0",
-    "grunt-contrib-less": "^0.11.4",
-    "grunt-contrib-watch": "^0.6.0",
-    "grunt-contrib-imagemin": "^0.9.0",
-    "grunt-autoprefixer": "^0.7.2",
-    "grunt-contrib-cssmin": "^0.10.0",
-    "grunt-contrib-htmlmin": "^0.3.0",
-    "http-server": "^0.6.1"
+    "grunt": "*",
+    "grunt-autoprefixer": "*",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-htmlmin": "*",
+    "grunt-contrib-imagemin": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-grunticon": "*",
+    "grunt-notify": "*",
+    "grunt-svgmin": "*",
+    "http-server": "*"
   },
   "scripts": {
     "start": "http-server -p 8000"
