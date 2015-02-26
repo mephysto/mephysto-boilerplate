@@ -28,47 +28,41 @@ module.exports = function (grunt) {
     pkg: this.file.readJSON('package.json'),
 
     // locations
-    cwd: 'src/',                // local folder, edit files here
-    build: 'build/',            // build folder, grunt will compile end result to here
-    release: 'release/',  // release folder, grunt will create minified assets here
+    cwd:      'src/',     // local folder,   edit files here
+    build:    'build/',   // build folder,   grunt will compile end result to here
+    release:  'release/', // release folder, grunt will create minified assets here
 
 
     /* ################
         NOTIFY 
     ################ */
-    /* NOTIFY */
     // throw up notification messages when a certain task has completed.
     notify: {
       watchJS: {
         options: {
-          title: 'JavaScript finished building',
-          message: 'Java\'s scripted'
+          message: 'JavaScript finished.'
         }
       },
       watchCSS: {
         options: {
-          title: 'Styles finished compiling',
-          message: 'Things are looking prettier'
+          message: 'Styles finished.'
         }
       },
       watchIMG: {
         options: {
-          title: 'Images finished optimizing',
-          message: 'Paintings painted'
+          message: 'Images finished.'
         }
       },
       buildcomplete: {
         options: {
-          title: 'full build',
-          message: 'Carrier has arrived'
+          message:'Build complete.'
         }
       }
     },
 
     /* ################
         STYLES 
-    ############  */
-    /* STYLES */
+    ################ */
     // process LESS into CSS
     less: {
       local: {
@@ -141,7 +135,7 @@ module.exports = function (grunt) {
     },
     // minify JS
     uglify: {
-      local: {
+      build: {
         options: {
           mangle: false, // preserve variables
           // sourceMap: true,
