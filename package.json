@@ -14,7 +14,7 @@
       "email": "contact@mauricemelchers.nl"
     }
   ],
-  "devDependencies": {
+  "dependencies": {
     "grunt": "*",
     "grunt-autoprefixer": "*",
     "grunt-contrib-clean": "^0.6.0",

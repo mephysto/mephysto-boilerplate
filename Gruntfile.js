@@ -404,7 +404,6 @@ module.exports = function (grunt) {
     'createsvgfonts']);
 
   // only watch specific things
-  grunt.registerTask('watchhtml',     ['watch:html']);
   grunt.registerTask('watchstyles',   ['watch:styles']);
   grunt.registerTask('watchscripts',  ['watch:scripts']);
   grunt.registerTask('watchimages',   ['watch:images']);
