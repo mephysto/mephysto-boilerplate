@@ -1,8 +1,8 @@
 {
   "name": "Mephysto-boilerplate",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Maurice Melchers",
-  "desc`ription": "A starting point for my personal and professional front end projects",
+  "description": "A starting point for my personal and professional front end projects",
   "repository": {
     "type": "git",
     "url": "git://github.com/mephysto/mephysto-boilerplate.git"
@@ -15,22 +15,12 @@
     }
   ],
   "devDependencies": {
-    "grunt": "*",
-    "grunt-autoprefixer": "*",
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-concat": "*",
-    "grunt-contrib-copy": "*",
-    "grunt-contrib-cssmin": "*",
-    "grunt-contrib-htmlmin": "*",
-    "grunt-contrib-imagemin": "*",
-    "grunt-contrib-jshint": "*",
-    "grunt-contrib-less": "*",
-    "grunt-contrib-uglify": "*",
-    "grunt-contrib-watch": "*",
-    "grunt-grunticon": "*",
-    "grunt-notify": "*",
-    "grunt-svgmin": "*",
-    "http-server": "*"
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-concat": "^2.5.2",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-jshint": "^1.11.0"
   },
   "scripts": {
     "start": "http-server -p 8000"
