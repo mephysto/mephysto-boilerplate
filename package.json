@@ -1,28 +1,22 @@
 {
-  "name": "Mephysto-boilerplate",
-  "version": "0.1.1",
-  "author": "Maurice Melchers",
-  "description": "A starting point for my personal and professional front end projects",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/mephysto/mephysto-boilerplate.git"
-  },
-  "license": "MIT",
-  "contributors": [
-    {
-      "name": "Maurice Melchers",
-      "email": "contact@mauricemelchers.nl"
-    }
-  ],
-  "devDependencies": {
-    "del": "^1.2.0",
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^2.3.1",
-    "gulp-concat": "^2.5.2",
-    "gulp-imagemin": "^2.2.1",
-    "gulp-jshint": "^1.11.0"
-  },
+  "name": "mephysto-boilerplate",
+  "version": "0.0.1",
+  "description": " A starting point for my Frontend Projects",
+  "main": "src/main.js",
   "scripts": {
-    "start": "http-server -p 8000"
+    "build": "gulp",
+    "test": "gulp test"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-mocha": "^3.0.1",
+    "gulp-sass": "^3.0.0",
+    "gulp-util": "^3.0.7",
+    "mocha": "^3.2.0",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
   }
 }
